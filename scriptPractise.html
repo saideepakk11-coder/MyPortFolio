@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="head">This is the heading of the Website</h1>
+    
+    <script>
+        var ele = document.getElementById("head");
+        ele.innerHTML="hloooo";
+        
+       var newpara = document.createElement("p");
+       document.body.appendChild(newpara);
+       newpara.innerHTML="This is the generated image";
+       newpara.style.color="red";
+       head.parentNode.removeChild(head);
+
+       newpara.classList.add("green");
+       newpara.addEventListener("mouseover", function(){
+        newpara.style.color="blue";
+       })
+
+       newpara.addEventListener("mouseout", function(){
+        newpara.style.color="black";
+       })
+
+    </script>
+
+</body>
+</html>
