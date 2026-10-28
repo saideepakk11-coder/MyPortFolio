@@ -16,41 +16,85 @@
 </head>
 <body>
 
-    <header class="navbar">
+    <header class="navbar" id="navbar">
         <div class="nav-left">
-            <div class="short-name">
-                <h2 class="s">S</h2>
-                <h2 class="d">D</h2>
-            </div>
-            <div class="line">
-                <p><strong>|</strong></p>
-            </div>
-            <div class="name">
-                <h4>K Sai Deepak</h4>
-            </div>
+            <a href="#Home" class="brand-link">
+                <div class="short-name">
+                    <h2 class="s">S</h2>
+                    <h2 class="d">D</h2>
+                </div>
+                <div class="line">
+                    <p><strong>|</strong></p>
+                </div>
+                <div class="name">
+                    <h4>K Sai Deepak</h4>
+                </div>
+            </a>
         </div>
 
         <section class="nav-center">
             <a href="#Home" class="active nav-page">Home</a>
             <a href="#About" class="nav-page">About</a>
             <a href="#skills" class="nav-page">Skills</a>
+            <a href="#projects" class="nav-page">Projects</a>
             <a href="#education" class="nav-page">Education</a>
             <a href="#contact" class="nav-page">Contact</a>
         </section>
 
         <section class="nav-right">
-            <a href="https://github.com/saideepakk11-coder" target="_blank" class="githubbb" rel="noopener noreferrer">
+            <a href="https://github.com/saideepakk11-coder" target="_blank" class="githubbb" rel="noopener noreferrer" aria-label="GitHub Profile">
                 <i class="bi bi-github github"></i>
             </a>
 
-
-            <a href="https://www.linkedin.com/in/k-sai-deepak-6126a0338" target="_blank" class="linkedinnn" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/k-sai-deepak-6126a0338" target="_blank" class="linkedinnn" rel="noopener noreferrer" aria-label="LinkedIn Profile">
               <i class="bi bi-linkedin"></i>
             </a>
             
-                <a href="#contact"><button class="connect-btn">Let's Connect<i class="bi bi-send-fill send"></i> </button></a>
+            <a href="#contact"><button class="connect-btn">Let's Connect<i class="bi bi-send-fill send"></i></button></a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
         </section>
     </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+        <div class="mobile-nav-header">
+            <div class="short-name">
+                <h2 class="s">S</h2>
+                <h2 class="d">D</h2>
+                <span class="mobile-name">K Sai Deepak</span>
+            </div>
+            <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close navigation">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+        <nav class="mobile-nav-links">
+            <a href="#Home" class="mobile-nav-link active"><i class="bi bi-house-door"></i> Home</a>
+            <a href="#About" class="mobile-nav-link"><i class="bi bi-person"></i> About</a>
+            <a href="#skills" class="mobile-nav-link"><i class="bi bi-code-slash"></i> Skills</a>
+            <a href="#projects" class="mobile-nav-link"><i class="bi bi-folder2-open"></i> Projects</a>
+            <a href="#education" class="mobile-nav-link"><i class="bi bi-mortarboard"></i> Education</a>
+            <a href="#contact" class="mobile-nav-link"><i class="bi bi-envelope"></i> Contact</a>
+        </nav>
+        <div class="mobile-nav-footer">
+            <div class="mobile-socials">
+                <a href="https://github.com/saideepakk11-coder" target="_blank" rel="noopener noreferrer" class="mobile-social-link">
+                    <i class="bi bi-github"></i> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/k-sai-deepak-6126a0338" target="_blank" rel="noopener noreferrer" class="mobile-social-link">
+                    <i class="bi bi-linkedin"></i> LinkedIn
+                </a>
+            </div>
+            <a href="#contact" class="mobile-connect-link">
+                <button class="connect-btn mobile-btn">Let's Connect <i class="bi bi-send-fill send"></i></button>
+            </a>
+        </div>
+    </div>
+    <div class="nav-backdrop" id="navBackdrop"></div>
 
     <main>
         <!----------------------Home Page------------------------------------------------------->
@@ -77,21 +121,21 @@
                 </div>
 
                 <div class="buttons reveal">
-                        <a href="#skills" class=""><button class="projects-btn"><i class="bi bi-code-slash"></i> View My Skills</button></a>
-                    <button class="resume-btn " id="resumeBtn"><i class="bi bi-person"></i> Download Resume</button>
+                    <a href="#projects"><button class="projects-btn"><i class="bi bi-folder-check"></i> View My Projects</button></a>
+                    <button class="resume-btn" id="resumeBtn"><i class="bi bi-file-earmark-arrow-down"></i> Download Resume</button>
                 </div>
 
                 <div class="learning-info reveal">
 
                     <div class="projects">
-                        <h4 class="no"> 2+</h4>
+                        <h4 class="no">2+</h4>
                         <p class="text"><small>Projects</small></p>
                     </div>
 
                     <div class="seperator"></div>
 
                     <div class="technologies">
-                        <h4 class="no">4+</h4>
+                        <h4 class="no">6+</h4>
                         <p class="text"><small>Technologies</small></p>
                     </div>
 
@@ -206,7 +250,7 @@
 
                         <div class="about-education-details">
                             <h4>Goals</h4>
-                            <p class="about-education-bottom">
+                            <p class="about-goals-text">
                                 Get a great internship & placement, and build my own products in the future.</p>
                         </div>
                     </div>
@@ -277,6 +321,104 @@
                 </div>
             </section>
 
+            <!---------------------------------Projects Section--------------------------------------------->
+            <section class="projects-section" id="projects">
+                <div class="projects-header-content">
+                    <p class="get-to-know reveal"><i class="bi bi-circle-fill"></i> PORTFOLIO WORK</p>
+                    <div class="projects-title reveal">
+                        <h1>My</h1>
+                        <h1 class="accent-title">Projects</h1>
+                    </div>
+                    <p class="projects-description reveal">
+                        Explore the projects I've built while developing my skills in frontend development and interactive web experiences.
+                    </p>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1: KORVA Fitness Website -->
+                    <article class="project-card reveal">
+                        <div class="project-preview">
+                            <div class="browser-header">
+                                <div class="browser-dots">
+                                    <span class="browser-dot red"></span>
+                                    <span class="browser-dot yellow"></span>
+                                    <span class="browser-dot green"></span>
+                                </div>
+                                <span class="browser-address"><i class="bi bi-lock-fill"></i> korva-fitness.app</span>
+                            </div>
+                            <div class="preview-media">
+                                <img src="korva-preview.png" alt="KORVA Fitness Website Preview" class="project-img" loading="lazy">
+                                <div class="preview-overlay">
+                                    <span class="featured-tag"><i class="bi bi-fire"></i> Featured Project</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-title-row">
+                                <h3 class="project-title">KORVA Fitness Website</h3>
+                            </div>
+                            <p class="project-text">
+                                A modern fitness website featuring workout information, an interactive quiz, weather API integration, and a fitness products catalog with category filtering and sorting.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-badge"><i class="bi bi-filetype-html"></i> HTML</span>
+                                <span class="tech-badge"><i class="bi bi-filetype-css"></i> CSS</span>
+                                <span class="tech-badge"><i class="bi bi-filetype-js"></i> JavaScript</span>
+                                <span class="tech-badge"><i class="bi bi-cloud-sun"></i> REST API Integration</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/saideepakk11-coder" target="_blank" rel="noopener noreferrer" class="btn-view-code">
+                                    <i class="bi bi-github"></i> View Code
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: JavaScript Shopping Cart -->
+                    <article class="project-card reveal">
+                        <div class="project-preview">
+                            <div class="browser-header">
+                                <div class="browser-dots">
+                                    <span class="browser-dot red"></span>
+                                    <span class="browser-dot yellow"></span>
+                                    <span class="browser-dot green"></span>
+                                </div>
+                                <span class="browser-address"><i class="bi bi-lock-fill"></i> js-shopping-cart.live</span>
+                            </div>
+                            <div class="preview-media">
+                                <img src="cart-preview.png" alt="JavaScript Shopping Cart Preview" class="project-img" loading="lazy">
+                                <div class="preview-overlay">
+                                    <span class="featured-tag"><i class="bi bi-cart3"></i> Interactive JS</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-title-row">
+                                <h3 class="project-title">JavaScript Shopping Cart</h3>
+                            </div>
+                            <p class="project-text">
+                                An interactive shopping cart featuring dynamic product rendering, product searching, cart management, and persistent data using local storage.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="tech-badge"><i class="bi bi-filetype-html"></i> HTML</span>
+                                <span class="tech-badge"><i class="bi bi-filetype-css"></i> CSS</span>
+                                <span class="tech-badge"><i class="bi bi-filetype-js"></i> JavaScript</span>
+                                <span class="tech-badge"><i class="bi bi-cursor"></i> DOM Manipulation</span>
+                                <span class="tech-badge"><i class="bi bi-database"></i> Local Storage</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://saideepakk11-coder.github.io/JavaScriptProjects/" target="_blank" rel="noopener noreferrer" class="btn-view-demo">
+                                    <i class="bi bi-box-arrow-up-right"></i> View Project
+                                </a>
+                                <a href="https://github.com/saideepakk11-coder/JavaScriptProjects" target="_blank" rel="noopener noreferrer" class="btn-view-code">
+                                    <i class="bi bi-github"></i> View Code
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
             <!---------------------------------------Education Page------------------------->
             <section class="education-page" id="education">
                 <div class="education-left ">
@@ -335,7 +477,7 @@
 
                         <div class="degree-right">
                           <p>Completed my diploma with a strong foundation in electronics,
-                            communication and prectical skills
+                            communication and practical skills
                           </p>  
                           <span>Completed</span>
                         </div>
@@ -364,7 +506,7 @@
             <!-----------------------------------------------------------------Contact Page-------------------------------------->
             <section class="contact-page" id="contact">
                 <div class="contact-left">
-                    <p class="get-to-know-con revea"> <i class="bi bi-circle-fill"></i> GET IN TOUCH</p>
+                    <p class="get-to-know-con reveal"> <i class="bi bi-circle-fill"></i> GET IN TOUCH</p>
                     <div class="aboutMe-edu reveal">
                         <h1>Let's</h1>
                         <h1 class="aboutMe-me-edu">Build Something</h1>
@@ -389,7 +531,7 @@
                             </div>
                             <div class="block-right">
                                 <h4>Email</h4>
-                                <p>saideepakk11@gmail.com</p>
+                                <p><a href="mailto:saideepakk11@gmail.com" class="contact-link">saideepakk11@gmail.com</a></p>
                                 <p>Drop me a message anytime</p>
                             </div>
                         </div>
@@ -399,7 +541,7 @@
                             </div>
                             <div class="block-right">
                                 <h4>Phone</h4>
-                                <p>+91 9182667685</p>
+                                <p><a href="tel:+919182667685" class="contact-link">+91 9182667685</a></p>
                                 <p>Feel free to call</p>
                             </div>
                         </div>
@@ -444,20 +586,20 @@
                                     </div>
                                 
                                 <div class="contact-btns">
-                                    <button class="send-message" type="submit"><i class="bi bi-send-fill"></i>Send Message</button>
-                                    <p>I Ususally respond within 24 hours</p>
+                                    <button class="send-message" type="submit"><i class="bi bi-send-fill"></i> Send Message</button>
+                                    <p>I usually respond within 24 hours</p>
                                 </div>
                             </form>
                         </div>
 
                         <div class="connect-with-me reveal">
                             <p class="get-to-know-connect"> <i class="bi bi-circle-fill"></i> Connect With ME</p>
-                            <p class="connect-matter">Let's stay connected onn social media for more updates and projects</p>
+                            <p class="connect-matter">Let's stay connected on social media for more updates and projects</p>
 
                             <div class="social-links">
                                 <a href="https://github.com/saideepakk11-coder" target="_blank" class="github-bottom" rel="noopener noreferrer"><button class="social-buttons githubb" ><img src="https://cdn-icons-png.flaticon.com/128/733/733609.png" alt="GitHub Logo" class="social-img"> <p class="last-page-images">Github</p><i class="bi bi-arrow-right"></i></button></a>
                                 <a href="https://www.linkedin.com/in/k-sai-deepak-6126a0338" target="_blank" rel="noopener noreferrer" class="linkedin-bottom"><button class="social-buttons linkedinn"><img src="https://cdn-icons-png.flaticon.com/128/3536/3536505.png" alt="LinkedIn Logo" class="social-img"><p class="last-page-images">Linked-In </p><i class="bi bi-arrow-right"></i></button></a>
-                                <a href="http://instagram.com/sai_deepak_119/" target="_blink" class="instagram-bottom" rel="noopener noreferrer"><button class="social-buttons instagram"><img src="https://cdn-icons-png.flaticon.com/128/15713/15713420.png" alt="Instagram Logo" class="social-img"> <p class="last-page-images">Instagram</p> <i class="bi bi-arrow-right"></i></button></a>
+                                <a href="https://www.instagram.com/sai_deepak_119/" target="_blank" class="instagram-bottom" rel="noopener noreferrer"><button class="social-buttons instagram"><img src="https://cdn-icons-png.flaticon.com/128/15713/15713420.png" alt="Instagram Logo" class="social-img"> <p class="last-page-images">Instagram</p> <i class="bi bi-arrow-right"></i></button></a>
                             </div>
                         </div>
                     </div>
@@ -465,7 +607,49 @@
             </section>
     </main>
 
-    <footer>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="short-name">
+                    <h2 class="s">S</h2>
+                    <h2 class="d">D</h2>
+                </div>
+                <div class="line">
+                    <p><strong>|</strong></p>
+                </div>
+                <div class="footer-name">
+                    <h4>K Sai Deepak</h4>
+                    <p class="footer-tagline">CSE Student &amp; Aspiring Full Stack Developer</p>
+                </div>
+            </div>
+
+            <div class="footer-nav">
+                <a href="#Home">Home</a>
+                <a href="#About">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#education">Education</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="footer-socials">
+                <a href="https://github.com/saideepakk11-coder" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                    <i class="bi bi-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/k-sai-deepak-6126a0338" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="https://www.instagram.com/sai_deepak_119/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile">
+                    <i class="bi bi-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 K Sai Deepak. Built with HTML, CSS &amp; JavaScript.</p>
+            <a href="#Home" class="back-to-top" id="backToTop" aria-label="Scroll back to top">
+                <i class="bi bi-chevron-up"></i>
+            </a>
+        </div>
     </footer>
     <script src="script.js"></script>
 </body>
